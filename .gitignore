@@ -1,0 +1,12 @@
+venv*
+.idea/
+.vscode/
+build/
+dist/
+*.egg-info
+*.pyc
+.DS_store
+*.log*
+local_settings.py
+*.xlsx
+
