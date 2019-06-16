@@ -106,8 +106,6 @@ class SingleLinkList():
         # 若链表长度为空直接置空
         if self.length == 1 or index == 0:
             self.head = self.head.next_
-            self.length -= 1
-            return
         elif index > -1 and index <= self.length-1:
             next_ = self.head
             for _ in range(index+1):
@@ -117,9 +115,8 @@ class SingleLinkList():
             this.pre.next_ = this.next_
             if this.next_:
                 this.next_.pre = this.pre
-            # this.next_ = this.next_.next_
-            # this.next_.next_.pre = this
-            self.length -= 1
+
+        self.length -= 1
 
 
 if __name__ == '__main__':
