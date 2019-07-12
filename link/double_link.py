@@ -1,6 +1,6 @@
 
 '''
-单链表
+双向链表
 '''
 
 
@@ -15,7 +15,7 @@ class Node():
 
 class SingleLinkList():
     '''
-    单向链表数据结构
+    双向链表数据结构
     index均从0开始，第index个代表下标为index的那个节点
     '''
 
