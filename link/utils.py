@@ -99,3 +99,30 @@ class SingleLink():
 
         result.next_node = _next.next_node
         self.length -= 1
+
+    def middle_node(self):
+        """
+        给定一个带有头结点 head 的非空单链表，返回链表的中间结点。
+        如果有两个中间结点，则返回第二个中间结点。
+        :return:
+        """
+        if not self.head:
+            return self.head
+
+        result = None
+        if self.length % 2 == 0:
+            middle = int(self.length / 2)
+            _next = self.head
+            for _ in range(middle + 1):
+                result = _next
+                _next = _next.next_node
+
+            return result.val, result.next_node.val
+        else:
+            middle = int((self.length + 1) / 2)
+            _next = self.head
+            for _ in range(middle):
+                result = _next
+                _next = _next.next_node
+
+            return result.val
