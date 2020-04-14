@@ -1,5 +1,6 @@
 def merge_sort(nums, start, end):
     """
+    (原地修改nums版本）
     #912 归并排序：https://leetcode-cn.com/problems/sort-an-array/
     5 4 7 9 3 8 2 1
     5 4 7 9 | 3 8 2 1
@@ -46,6 +47,35 @@ def merge_sort(nums, start, end):
     merge_sort(nums, start, mid)  # 左边的部按归并排好序
     merge_sort(nums, mid, end)  # 右边的部分按归并排好虚
     merge(nums, start, mid, end)  # 合并两个有序序列
+
+
+def merge_sort_return(nums, start, end):
+    def merge(left, right):
+        result = []
+        i = 0
+        j = 0
+        while i < len(left) and j < len(right):
+            if left[i] < right[j]:
+                result.append(left[i])
+                i = i + 1
+            else:
+                result.append(right[j])
+                j = j + 1
+
+        if i < len(left):
+            result.extend(left[i:])
+        if j < len(right):
+            result.extend(right[j:])
+
+        return result
+
+    if len(nums[start:end]) <= 1:
+        return nums[start:end]
+
+    mid = int((start + end + 1) / 2)
+    left = merge_sort(nums, start, mid)
+    right = merge_sort(nums, mid, end)
+    return merge(left, right)
 
 
 nums = [4, 3, 2, 1, 0]
