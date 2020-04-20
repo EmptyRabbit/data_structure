@@ -3,6 +3,7 @@ import copy
 
 def insertion_sort(nums):
     """
+    #todo 超过时间
     #912 插入排序：https://leetcode-cn.com/problems/sort-an-array/
     :param nums:
     :return:
