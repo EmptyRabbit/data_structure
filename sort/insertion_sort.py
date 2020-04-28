@@ -5,6 +5,7 @@ def insertion_sort(nums):
     """
     #todo 超过时间
     #912 插入排序：https://leetcode-cn.com/problems/sort-an-array/
+    分为已排序和未排序，每次从未排序中选第一个，插入到已排序中合适的位置
     :param nums:
     :return:
     """

@@ -5,6 +5,7 @@ def selection_sort(nums):
     """
     #todo 超过时间
     #912 选择排序：https://leetcode-cn.com/problems/sort-an-array/
+    分为未排序和已排序，每次从未排序筛选出最小的，插到已排序最后
     :param nums:
     :return:
     """
