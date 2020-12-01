@@ -7,8 +7,8 @@ class LinkNode():
         result = []
         _next_node = self
         while _next_node:
-            result.append(self.val)
-            _next_node = self.next_node
+            result.append(_next_node.val)
+            _next_node = _next_node.next_node
         return result
 
 

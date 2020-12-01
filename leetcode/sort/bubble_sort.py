@@ -1,5 +1,5 @@
 def bubble_sort(nums):
-    for i in range(len(nums)):
+    for i in range(len(nums) - 1):
         length = len(nums) - i
         for j in range(length - 1):
             if nums[j] > nums[j + 1]:
@@ -8,4 +8,4 @@ def bubble_sort(nums):
     return nums
 
 
-print(bubble_sort([5,2,3,1]))
+print(bubble_sort([5, 2, 3, 1]))

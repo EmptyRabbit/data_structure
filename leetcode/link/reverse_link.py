@@ -23,3 +23,16 @@ def reverse_single_link(head):
         head = tmp
 
     return pre_node
+
+
+def reverse_single_link_test(head):
+    if not head or not head.next_node:
+        return
+
+    new_head = reverse_single_link(head.next_node)
+    head.next_node.next_node = head
+    head.next_node = None
+    return new_head
+
+
+
